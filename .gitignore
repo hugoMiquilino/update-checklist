@@ -1,0 +1,4 @@
+.vscode
+.env
+result.csv
+/modules/__pycache__
