@@ -96,7 +96,7 @@ def collector():
                 print(f"Erro ao clicar no botão de próxima página: {click_exception}")
                 driver.execute_script("arguments[0].click();", next_btn)
 
-        print("Tabela extraída com sucesso!\n============================\n")
+        print("=>   Tabela extraída com sucesso!\n=================================")
 
         return complete_table
 

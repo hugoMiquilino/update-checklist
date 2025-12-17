@@ -1,4 +1,8 @@
 .vscode
 .env
+main.spec
 result.csv
 /modules/__pycache__
+/dist
+/build
+/assets

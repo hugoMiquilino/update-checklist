@@ -9,9 +9,7 @@ def merge(df):
     df["Vencimento"] = df["Feito"] + pd.Timedelta(days=15)
     del df["Feito"]
 
-    print(f"{df.to_string()}\n\n")
-
-    df.to_csv("result.csv")
+    print(f"{df.to_string()}\n\n=================================\n")
 
     to_excel(df)
 
@@ -31,6 +29,10 @@ def main():
             "None",
         ],
     )
+
+    df.to_csv("result.csv")
+
+    # df = pd.read_csv("result.csv")
 
     merge(df)
 

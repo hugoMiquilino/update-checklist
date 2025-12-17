@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from openpyxl import load_workbook
 from openpyxl.worksheet.table import Table, TableStyleInfo
@@ -7,9 +8,10 @@ from openpyxl.styles.differential import DifferentialStyle
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
+
 def to_excel(df):
 
-    file_path = "E:/UNIDADE D/MEUS DOCUMENTOS/CHECK LIST.xlsx"
+    file_path = os.path.join("E:/", "UNIDADE D", "MEUS DOCUMENTOS", "CHECK LIST.xlsx")
     sheet_names = ["Cavalos", "Carretas"]
 
     def format(file_path, sheet_name):
@@ -111,7 +113,7 @@ def to_excel(df):
         workbook.save(file_path)
         workbook.close()
 
-        print(f"Aba {sheet_name} formatada com sucesso.")
+        print(f"=>   Aba {sheet_name} formatada com sucesso.\n")
 
     for sheet_name in sheet_names:
 
