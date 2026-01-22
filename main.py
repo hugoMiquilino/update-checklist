@@ -4,10 +4,10 @@ import pandas as pd
 def merge(df):
     
     df = df.drop_duplicates(subset="Placa")
-    df = df[["Placa", "Feito"]]
-    df["Feito"] = pd.to_datetime(df["Feito"], dayfirst=True)
-    df["Vencimento"] = df["Feito"] + pd.Timedelta(days=15)
-    del df["Feito"]
+    df = df[["Placa", "Vencimento"]]
+    # df["Feito"] = pd.to_datetime(df["Feito"], dayfirst=True)
+    # df["Vencimento"] = df["Feito"] + pd.Timedelta(days=15)
+    # del df["Feito"]
 
     print(f"{df.to_string()}\n\n=================================\n")
 
@@ -22,10 +22,13 @@ def main():
         columns=[
             "Placa",
             "Tipo",
+            "Marca",
             "Modelo",
             "Tipo Frota",
             "Responsável",
+            "Proprietario",
             "Feito",
+            "Vencimento",
             "None",
         ],
     )
