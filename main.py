@@ -22,6 +22,7 @@ def main():
         columns=[
             "Placa",
             "Tipo",
+            "Tecnologia",
             "Marca",
             "Modelo",
             "Tipo Frota",
